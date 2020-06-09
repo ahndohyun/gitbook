@@ -29,8 +29,8 @@ return (
 ## 2. props
 
 ```text
-function Sub({name}){                // (name)으로 가져온다면
-   return <div>{name}</div>          // {name.name}으로 사용해야 한다.
+function Sub({name}){           
+   return <div>{name}</div>      
 }
 
 function Main(){
@@ -38,12 +38,26 @@ function Main(){
 }
 ```
 
+{% hint style="danger" %}
+만약 props를 \(name\)으로 가져온다면 return 값에 들어갈 내용은 &lt;div&gt;{name.name}&lt;/div&gt;
+
+props는 객체형태로 전달되기 때문.
+{% endhint %}
+
 
 
 ## 3. 배열의 렌더링
 
 ```text
+const arr = [1,2,3];
 
+return (
+    <div>
+        {arr.map((ele,index) => (
+            <div key={index}>{ele}</div>
+        ))}
+    </div>
+);
 ```
 
 
