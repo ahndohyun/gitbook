@@ -77,9 +77,11 @@ const num = useRef\(4\)
 
 
 
-## UseRef
+## UseEffect
 
-DOM에 직접적인 접근이 필요할  :
+useEffect\(function\(\), \[array\]\) 
+
+* function : render 또는 re-render 시에 실행하고 싶은 함수
 
 ```
 const sample = useRef();
